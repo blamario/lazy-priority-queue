@@ -1,6 +1,6 @@
 cabal-version:       >=1.10
 name:                lazy-priority-queue
-version:             0.1
+version:             0.1.0.1
 synopsis:            Lazy-Spined Monadic Priority Queues
 
 description: This library provides a priority queue data structure that is meant to be used primarily as a control
@@ -9,15 +9,18 @@ description: This library provides a priority queue data structure that is meant
              tracks the cost incurred by each computation it stores, and provides operations for pruning overly
              expansive branches.
 
--- bug-reports:
-license:             GPL-3
+bug-reports:         https://github.com/blamario/lazy-priority-queue/issues
+license:             BSD3
 license-file:        LICENSE
 author:              Mario Blažević
 maintainer:          mblazevic@stilo.com
-copyright:           Stilo International plc
+copyright:           (c) 2019 Stilo International plc
 category:            Control, Data
 build-type:          Simple
 --extra-source-files:  CHANGELOG.md
+source-repository head
+  type:              git
+  location:          https://github.com/blamario/lazy-priority-queue
 
 Library
   default-language:  Haskell2010
