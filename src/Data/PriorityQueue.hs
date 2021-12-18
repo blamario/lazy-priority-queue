@@ -1,12 +1,7 @@
 {-
     Copyright (C) Stilo International plc, 2019
 
-    This source code is unpublished proprietary information of Stilo
-    Corporation.  The copyright notice above does not evidence any
-    actual or intended publication of such source code.
-
-    This file may not be redistributed as source, either by itself,
-    or as part of software derived from this file.
+    See LICENSE
 -}
 
 {-# LANGUAGE GADTs, FlexibleContexts, FlexibleInstances, MultiParamTypeClasses, ScopedTypeVariables, UndecidableInstances #-}
@@ -27,6 +22,14 @@ import Prelude hiding (filter)
 data Branching
 data Pruned
 
+{- | A lazy-spined priority queue where the type parameters t c a are:
+
+* t for a phantom that can be either Pruned for a single-item container or Branching for a growing priority queue;
+
+* c for the cost type, like Sum Int; and
+
+* a for the values
+-}
 data PQueue t c a = Costly !c (PQueue t c a)
                   | Free !(Ground a) (PQueue t c a)
                   | Empty

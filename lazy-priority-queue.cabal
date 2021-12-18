@@ -1,6 +1,6 @@
 cabal-version:       >=1.10
 name:                lazy-priority-queue
-version:             0.1.0.1
+version:             0.1.0.2
 synopsis:            Lazy-Spined Monadic Priority Queues
 
 description: This library provides a priority queue data structure that is meant to be used primarily as a control
